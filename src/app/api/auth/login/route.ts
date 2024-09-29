@@ -9,7 +9,7 @@ export async function POST(req:NextRequest):Promise<NextResponse>{
             return NextResponse.json(loginService, {status: 400});
         }
         return NextResponse.json(loginService, {status:200});
-    }catch(error){
-        return NextResponse.json({message: "Error with the controller login"}, {status: 500})
+    }catch(error:unknown){
+        return NextResponse.json({message: `rror with the controller login Error:${error}`}, {status: 500})
     }
 }
