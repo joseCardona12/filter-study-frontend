@@ -4,7 +4,7 @@ import { IUser } from "@/interfaces/userInterface";
 export default class AuthService{
     static async login(user:Partial<IUser>):Promise<IAuth| {message: string} | undefined>{
         try{
-            const response = await fetch("http://localhost:3000/api/auth/login",{
+            const response = await fetch("https://filter-study-backend-1.onrender.com/api/auth/login",{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
